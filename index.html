@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="WDD 231 Course Home Page">
+  <meta name="author" content="Preston Machanga">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231 | Home</title>
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+<header>
+  <img src="images/logo.svg" alt="Site logo">
+  <span>Preston Machanga</span>
+  <button id="menu"></button>
+</header>
+
+<nav>
+  <ul class="navigation">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Chamber</a></li>
+    <li><a href="#">Final</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Home</h1>
+
+  <section>
+    <h2>About Me</h2>My name is Preston Machanga,I am undertaking web development course. I am a kenyan by citizenship.I love coding
+    <p>This is my WDD 231 course home page.</p>
+  </section>
+
+  <section>
+    <h2>Web & Computer Programming Certificate</h2>
+
+    <div class="filters">
+      <button id="all">All</button>
+      <button id="wdd">WDD</button>
+      <button id="cse">CSE</button>
+    </div>
+
+    <div id="courses"></div>
+    <p>Total Credits: <span id="credits"></span></p>
+  </section>
+
+  <section>
+    <h2>Resources</h2>
+    <p>Helpful learning resources.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/yourusername">GitHub</a>
+    <a href="https://linkedin.com">LinkedIn</a>
+  </div>
+
+  <p>
+    © <span id="currentyear"></span> Preston | Machanga
+  </p>
+
+  <p id="lastModified"></p>
+</footer>
+</body>
+</html>

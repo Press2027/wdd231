@@ -1,0 +1,55 @@
+@media (min-width: 768px) {
+
+  /* ---------- Header ---------- */
+  header {
+    justify-content: space-between;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  /* ---------- Navigation ---------- */
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation li a {
+    padding: 1rem 1.5rem;
+  }
+
+  /* ---------- Main Layout ---------- */
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  main h1 {
+    grid-column: 1 / -1;
+  }
+
+  section {
+    margin-bottom: 0;
+  }
+
+  /* ---------- Courses ---------- */
+  #courses {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  footer p {
+    margin: 0.25rem 0;
+  }
+}
