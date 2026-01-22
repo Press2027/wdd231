@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "name": "Tecomp Solutions Ltd",
+      "address": "123 Nairobi Street",
+      "phone": "+254 712 345 111",
+      "website": "https://tecompsolutions.com",
+      "image": "image4.jpg",
+      "membership": 1
+    },
+    {
+      "name": "Green World",
+      "address": "456 Far Road",
+      "phone": "+254 798 123 231",
+      "website": "https://greenworld.co.ke",
+      "image": "image10.jpg",
+      "membership": 2
+    },
+    {
+      "name": "Mosq Farms",
+      "address": "406 Malindi Road",
+      "phone": "+254 798 123 456",
+      "website": "https://mosqfarms.co.ke",
+      "image": "image11.jpg",
+      "membership": 3
+    },
+    {
+      "name": "Utawala Farms",
+      "address": "135 Kinka Road",
+      "phone": "+254 798 123 457",
+      "website": "https://utawalafarms.co.ke",
+      "image": "image11.jpg",
+      "membership": 1
+    },
+    {
+      "name": "GM Farms",
+      "address": "56 Malkia Road",
+      "phone": "+254 798 123 458",
+      "website": "https://gmfarms.co.ke",
+      "image": "image10.jpg",
+      "membership": 3
+    },
+    {
+      "name": "Toyota Kenya",
+      "address": "46 Mombasa Road",
+      "phone": "+254 798 123 459",
+      "website": "https://toyotakenya.co.ke",
+      "image": "image8.jpg",
+      "membership": 2
+    },
+    {
+      "name": "Urban Builders",
+      "address": "789 City Avenue",
+      "phone": "+254 701 222 333",
+      "website": "https://urbanbuilders.com",
+      "image": "image6.jpg",
+      "membership": 1
+    },
+    {
+      "name": "Tala Fresh Market",
+      "address": "12 Market Street",
+      "phone": "+254 722 555 111",
+      "website": "https://talafresh.co.ke",
+      "image": "image10.jpg",
+      "membership": 2
+    },
+    {
+      "name": "SmartTech Electronics",
+      "address": "88 Innovation Way",
+      "phone": "+254 733 444 222",
+      "website": "https://smarttech.co.ke",
+      "image": "image5.jpg",
+      "membership": 3
+    },
+    {
+      "name": "Sunrise Hotel Tala",
+      "address": "25 Sunrise Road",
+      "phone": "+254 711 999 888",
+      "website": "https://sunrisehoteltala.co.ke",
+      "image": "image7.jpg",
+      "membership": 2
+    }
+  ]
+}

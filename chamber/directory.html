@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore members of Tala Chamber of Commerce and discover local businesses.">
+  <meta name="author" content="Preston Machanga">
+
+  <title>Tala Chamber Directory</title>
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tala Chamber of Commerce Directory">
+  <meta property="og:description" content="Discover local businesses in Tala">
+  <meta property="og:image" content="images/hero.webp">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="branding">
+      <img src="images/tala.jpg" alt="Tala Chamber Logo">
+      <h1>Tala Chamber of Commerce</h1>
+    </div>
+
+    <nav>
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="#">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images/tala_bussiness.jpg" alt="Tala City">
+    <a class="cta" href="#">Keynote Tickets</a>
+  </section>
+
+  <main>
+    <h2>Business Directory</h2>
+
+    <div class="directory-controls">
+      <button id="grid">Grid View</button>
+      <button id="list">List View</button>
+    </div>
+
+    <section id="members" class="grid"></section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Tala Chamber of Commerce</h3>
+        <p>📍 Nairobi, Kenya</p>
+        <p>📞 +254 700 000 000</p>
+        <p>✉ info@talachamber.org</p>
+      </div>
+
+      <div class="social">
+        <img src="images/youtube.png" alt="YouTube">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/linkdin1.png" alt="LinkedIn">
+      </div>
+
+      <div>
+        <p>WDD 231 Class Project</p>
+        <p>Preston Machanga</p>
+        <p>&copy; <span id="year"></span> Tala Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
