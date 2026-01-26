@@ -1,12 +1,12 @@
 /* ===============================
-   GLOBAL VARIABLES
+   CSS VARIABLES
 ================================ */
 :root {
   --primary: #1f4e79;
   --secondary: #f4f4f4;
   --accent: #ffd166;
-  --text-dark: #000000;
-  --text-light: #ffffff;
+  --text-dark: #000;
+  --text-light: #fff;
 }
 
 /* ===============================
@@ -20,11 +20,11 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: var(--text-dark);
-  background-color: #ffffff;
+  background-color: var(--text-light);
 }
 
 /* ===============================
-   HEADER & NAVIGATION
+   HEADER & BRANDING
 ================================ */
 header {
   background-color: var(--primary);
@@ -43,23 +43,44 @@ header {
   height: auto;
 }
 
+/* ===============================
+   NAVIGATION (MOBILE FIRST)
+================================ */
+#hamburger {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
 .navigation {
   list-style: none;
-  display: flex;
-  gap: 1rem;
+  display: none;
+  flex-direction: column;
   padding: 0;
   margin: 1rem 0 0;
 }
 
+.navigation.open {
+  display: flex;
+}
+
 .navigation a {
-  color: var(--text-light);
+  padding: 0.75rem;
   text-decoration: none;
   font-weight: 700;
+  color: var(--text-light);
 }
 
 .navigation a:hover,
 .navigation a:focus {
   text-decoration: underline;
+}
+
+.navigation a.active {
+  background-color: var(--accent);
+  color: var(--text-dark);
 }
 
 /* ===============================
@@ -71,7 +92,6 @@ header {
 
 .hero img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
@@ -148,6 +168,21 @@ main h2 {
 .member-card img {
   max-width: 100%;
   height: auto;
+}
+
+/* ===============================
+   SPOTLIGHTS
+================================ */
+.spotlight-card {
+  background-color: var(--text-light);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.spotlight-card img {
+  max-width: 120px;
+  margin-bottom: 0.5rem;
 }
 
 /* ===============================
