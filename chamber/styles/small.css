@@ -1,17 +1,12 @@
-/* ===============================
-   CSS VARIABLES
-================================ */
 :root {
   --primary: #1f4e79;
   --secondary: #f4f4f4;
   --accent: #ffd166;
-  --text-dark: #000;
-  --text-light: #fff;
+  --text-dark: #000000;
+  --text-light: #ffffff;
 }
 
-/* ===============================
-   BASE STYLES
-================================ */
+/* BASE STYLES */
 * {
   box-sizing: border-box;
 }
@@ -20,12 +15,10 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: var(--text-dark);
-  background-color: var(--text-light);
+  background-color: #ffffff;
 }
 
-/* ===============================
-   HEADER & BRANDING
-================================ */
+/* HEADER & NAVIGATION */
 header {
   background-color: var(--primary);
   color: var(--text-light);
@@ -43,23 +36,13 @@ header {
   height: auto;
 }
 
-/* ===============================
-   NAVIGATION (MOBILE FIRST)
-================================ */
-#hamburger {
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--text-light);
-}
-
 .navigation {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: none;
   flex-direction: column;
-  padding: 0;
-  margin: 1rem 0 0;
+  gap: 1rem;
 }
 
 .navigation.open {
@@ -67,10 +50,15 @@ header {
 }
 
 .navigation a {
-  padding: 0.75rem;
+  color: var(--text-dark);
   text-decoration: none;
   font-weight: 700;
-  color: var(--text-light);
+  padding: 0.75rem;
+}
+
+.navigation a.active {
+  background-color: #004aad;
+  color: #fff;
 }
 
 .navigation a:hover,
@@ -78,20 +66,22 @@ header {
   text-decoration: underline;
 }
 
-.navigation a.active {
-  background-color: var(--accent);
-  color: var(--text-dark);
+#hamburger {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-/* ===============================
-   HERO SECTION
-================================ */
+/* HERO */
 .hero {
   position: relative;
 }
 
 .hero img {
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -112,9 +102,7 @@ header {
   opacity: 0.9;
 }
 
-/* ===============================
-   MAIN CONTENT
-================================ */
+/* MAIN CONTENT */
 main {
   padding: 1rem;
 }
@@ -123,9 +111,7 @@ main h2 {
   text-align: center;
 }
 
-/* ===============================
-   DIRECTORY CONTROLS
-================================ */
+/* DIRECTORY CONTROLS */
 .directory-controls {
   text-align: center;
   margin-bottom: 1rem;
@@ -145,9 +131,7 @@ main h2 {
   background-color: var(--accent);
 }
 
-/* ===============================
-   MEMBERS DIRECTORY
-================================ */
+/* MEMBERS DIRECTORY */
 #members.grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -170,14 +154,11 @@ main h2 {
   height: auto;
 }
 
-/* ===============================
-   SPOTLIGHTS
-================================ */
 .spotlight-card {
-  background-color: var(--text-light);
   border: 1px solid #ccc;
   padding: 1rem;
   text-align: center;
+  background: #fff;
 }
 
 .spotlight-card img {
@@ -185,9 +166,7 @@ main h2 {
   margin-bottom: 0.5rem;
 }
 
-/* ===============================
-   FOOTER
-================================ */
+/* FOOTER */
 footer {
   background-color: var(--primary);
   color: var(--text-light);
@@ -204,3 +183,26 @@ footer {
   width: 32px;
   height: auto;
 }
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  #members.grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+}
+                                

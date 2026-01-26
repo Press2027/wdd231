@@ -10,19 +10,19 @@
 
   <link rel="icon" href="images/favicon.ico">
 
-  <!-- Open Graph Meta Tags -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Tala Chamber of Commerce Directory">
   <meta property="og:description" content="Explore trusted local businesses, services, and entrepreneurs listed in the Tala Chamber of Commerce business directory.">
   <meta property="og:image" content="https://prestonmachanga.github.io/tala-chamber/images/hero.webp">
   <meta property="og:url" content="https://prestonmachanga.github.io/tala-chamber/directory.html">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Stylesheets -->
+  <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
@@ -30,74 +30,60 @@
   <!-- Scripts -->
   <script src="scripts/directory.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="branding">
-      <img src="images/tala.jpg" alt="Tala Chamber of Commerce Logo">
-      <h1>Tala Chamber of Commerce</h1>
+<header>
+  <div class="branding">
+    <img src="images/tala.jpg" alt="Tala Chamber of Commerce Logo">
+    <h1>Tala Chamber of Commerce</h1>
+  </div>
+
+  <nav>
+    <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html">Discover</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Business Directory</h2>
+
+  <div class="directory-controls">
+    <button id="grid">Grid View</button>
+    <button id="list">List View</button>
+  </div>
+
+  <section id="members" class="grid"></section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>Tala Chamber of Commerce</h3>
+      <p>📍 Nairobi, Kenya</p>
+      <p>📞 +254 700 000 000</p>
+      <p>✉ info@talachamber.org</p>
     </div>
 
-    <nav>
-      <button id="hamburger" aria-label="Toggle Navigation">☰</button>
-      <ul class="navigation">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html" class="active">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-        <li><a href="discover.html">Discover</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <img src="images/hero.webp" alt="Tala City Business District">
-    <a class="cta" href="#">Keynote Tickets</a>
-  </section>
-
-  <!-- MAIN CONTENT -->
-  <main>
-    <h2>Business Directory</h2>
-
-    <div class="directory-controls">
-      <button id="grid">Grid View</button>
-      <button id="list">List View</button>
+    <div class="social">
+      <img src="images/youtube.png" alt="YouTube">
+      <img src="images/facebook.png" alt="Facebook">
+      <img src="images/linkdin1.png" alt="LinkedIn">
     </div>
 
-    <section id="members" class="grid"></section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <h3>Tala Chamber of Commerce</h3>
-        <p>📍 Nairobi, Kenya</p>
-        <p>📞 +254 700 000 000</p>
-        <p>✉ info@talachamber.org</p>
-      </div>
-
-      <div class="social">
-        <img src="images/youtube.png" alt="YouTube">
-        <img src="images/facebook.png" alt="Facebook">
-        <img src="images/linkdin1.png" alt="LinkedIn">
-      </div>
-
-      <div>
-        <p>WDD 231 Class Project</p>
-        <p>Preston Machanga</p>
-        <p>&copy; <span id="year"></span> Tala Chamber</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-      </div>
+    <div>
+      <p>WDD 231 Class Project</p>
+      <p>Preston Machanga</p>
+      <p>&copy; <span id="year"></span> Tala Chamber</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
     </div>
-  </footer>
-
-  <script>
-    // Set dynamic year and last modified
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
+  </div>
+</footer>
 </body>
 </html>

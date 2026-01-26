@@ -25,15 +25,13 @@ function displayMembers(members) {
       <p><strong>Address:</strong> ${member.address}</p>
       <p><strong>Phone:</strong> ${member.phone}</p>
       <p><strong>Membership:</strong> ${getMembershipLevel(member.membership)}</p>
-      <p>${member.description}</p>
+      <p>${member.description || ""}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>
     `;
 
     membersContainer.appendChild(card);
   });
 }
-
-
 
 function getMembershipLevel(level) {
   switch (level) {
@@ -43,8 +41,6 @@ function getMembershipLevel(level) {
     default: return "Unknown";
   }
 }
-
-
 
 // GRID view
 gridBtn.addEventListener("click", () => {
@@ -61,5 +57,5 @@ listBtn.addEventListener("click", () => {
 // Default view
 membersContainer.classList.add("grid");
 
-// Load data
+// Load members
 getMembers();
