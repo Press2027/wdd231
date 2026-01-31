@@ -31,31 +31,33 @@
   <script src="scripts/spotlights.js" defer></script>
   <script src="scripts/navigation.js" defer></script>
 </head>
-
 <body>
   <!-- HEADER -->
   <header>
-    <div class="branding">
-      <img src="images/tala.jpg" alt="Tala Chamber of Commerce Logo">
-      <h1>Tala Chamber of Commerce</h1>
-    </div>
+  <div class="branding">
+    <img src="images/tala.jpg" alt="Tala Chamber of Commerce Logo">
+    <h1>Tala Chamber of Commerce</h1>
+  </div>
 
-    <nav>
-      <ul class="navigation">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Discover</a></li>
+  <nav>
+    <!-- Hamburger for mobile -->
+    <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html">Discover</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- MAIN CONTENT -->
   <main>
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero">
       <img src="images/hero.webp" alt="Tala city business district">
-      <a href="#" class="cta">Join the Chamber</a>
+      <a href="join.html" class="cta">Join the Chamber</a>
     </section>
 
     <!-- EVENTS -->
@@ -82,7 +84,7 @@
       </div>
     </section>
 
-    <!-- SPOTLIGHTS -->
+    <!-- SPOTLIGHT MEMBERS -->
     <section class="spotlights">
       <h2>Member Spotlights</h2>
       <div id="spotlight-container"></div>
@@ -114,7 +116,9 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script>
+    // Footer year and last modified
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
   </script>

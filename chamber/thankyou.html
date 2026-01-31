@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="branding">
+      <img src="images/tala.jpg" alt="Tala Chamber of Commerce Logo">
+      <h1>Tala Chamber of Commerce</h1>
+    </div>
+
+    <nav>
+      <!-- Hamburger for mobile -->
+      <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h1>Thank You for Joining!</h1>
+    <p>We appreciate your interest in the Chamber of Commerce.</p>
+
+    <section id="results"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Tala Chamber of Commerce</h3>
+        <p>📍 Nairobi, Kenya</p>
+        <p>📞 +254 700 000 000</p>
+        <p>✉ info@talachamber.org</p>
+      </div>
+
+      <div class="social">
+        <img src="images/youtube.png" alt="YouTube">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/linkdin1.png" alt="LinkedIn">
+      </div>
+
+      <div>
+        <p>WDD 231 Class Project</p>
+        <p>Preston Machanga</p>
+        <p>&copy; <span id="year"></span> Tala Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Display submitted form data from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const requiredFields = ["fname", "lname", "email", "phone", "business", "timestamp"];
+    let output = "<ul>";
+    requiredFields.forEach(field => {
+      const value = params.get(field) || "N/A";
+      output += `<li><strong>${field}:</strong> ${value}</li>`;
+    });
+    output += "</ul>";
+    document.getElementById("results").innerHTML = output;
+
+    // Footer year and last modified
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

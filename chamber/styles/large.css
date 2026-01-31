@@ -1,22 +1,47 @@
+/* MEDIA QUERIES - DESKTOP */
 @media (min-width: 768px) {
-  /* Members grid layout */
-  #members.grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
 
-  /* Navigation */
+  /* Desktop Navigation */
   #hamburger {
     display: none;
   }
 
   .navigation {
-    display: flex;
+    display: flex !important;
+    position: static;
+    flex-direction: row;
     gap: 1rem;
+    background: none;
+    width: auto;
+    padding: 0;
   }
 
-  /* Footer layout */
+  /* Directory grid */
+  #members.grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  /* Footer columns */
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+  }
+
+  /* Join page layout - 2 columns */
+  .join-layout {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
 }
