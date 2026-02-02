@@ -1,0 +1,43 @@
+/* ===============================
+   Base / Mobile-First Styles
+   =============================== */
+
+
+    /* Color Scheme */
+    :root {
+      --primary-color: #1e5f74;   /* headings, navigation */
+      --secondary-color: #f1f6f9; /* page background */
+      --accent-color: #4fb3bf;    /* accents and highlights */
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--secondary-color);
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary-color);
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-left: 6px solid var(--accent-color);
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .wireframe {
+      font-family: monospace;
+      background-color: #e6eef2;
+      padding: 15px;
+      overflow-x: auto;
+    }
