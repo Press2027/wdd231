@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Discover Tala | Tala Chamber</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore real locations in Tala, from markets and schools to scenic hills and rivers.">
+  <meta name="author" content="Preston Machanga">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <!-- Navigation Script -->
+  <script src="scripts/navigation.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="branding">
+      <img src="images/tala.jpg" alt="Tala Chamber Logo">
+      <h1>Tala Chamber of Commerce</h1>
+    </div>
+
+    <nav>
+      <button id="hamburger" aria-label="Toggle Navigation">☰</button>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <h2>Discover Tala</h2>
+    <section id="visitor-message" class="visitor-message"></section>
+    <section id="discover-container" class="discover-grid"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>Tala Chamber of Commerce</h3>
+        <p>📍 Nairobi, Kenya</p>
+        <p>📞 +254 700 000 000</p>
+        <p>✉ info@talachamber.org</p>
+      </div>
+      <div class="social">
+        <img src="images/youtube.png" alt="YouTube">
+        <img src="images/facebook.png" alt="Facebook">
+        <img src="images/linkedin1.png" alt="LinkedIn">
+      </div>
+      <div>
+        <p>WDD 231 Class Project</p>
+        <p>Preston Machanga</p>
+        <p>&copy; <span id="year"></span> Tala Chamber</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Discover JS -->
+  <script type="module">
+    import { places } from './data/discover.mjs';
+
+    const container = document.getElementById('discover-container');
+    places.forEach(place => {
+      const card = document.createElement('div');
+      card.classList.add('discover-card');
+      card.innerHTML = `
+        <figure>
+          <img src="${place.image}" alt="${place.name}">
+        </figure>
+        <h3>${place.name}</h3>
+        <address>${place.address}</address>
+        <p>${place.description}</p>
+        <button onclick="alert('Learn more about ${place.name}')">Learn More</button>
+      `;
+      container.appendChild(card);
+    });
+
+    // Visitor welcome message
+    const msgEl = document.getElementById('visitor-message');
+    const lastVisit = localStorage.getItem('lastVisit');
+    const now = new Date();
+    if (!lastVisit) {
+      msgEl.textContent = "Welcome to Tala! Enjoy exploring our community.";
+    } else {
+      const previous = new Date(parseInt(lastVisit, 10));
+      msgEl.textContent = `Welcome back! Your last visit was on ${previous.toLocaleDateString()} at ${previous.toLocaleTimeString()}.`;
+    }
+    localStorage.setItem('lastVisit', now.getTime());
+
+    // Footer dates
+    document.getElementById("year").textContent = now.getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

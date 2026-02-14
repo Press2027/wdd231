@@ -33,7 +33,6 @@
 </head>
 
 <body>
-  <!-- HEADER -->
   <header>
     <div class="branding">
       <img src="images/tala.jpg" alt="Tala Chamber of Commerce Logo">
@@ -51,82 +50,66 @@
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main class="join-layout">
-    <!-- FORM -->
-    <form method="get" action="thankyou.html">
-      <label>
-        First Name
-        <input type="text" name="fname" required autocomplete="given-name">
-      </label>
+    <section aria-labelledby="join-form-title">
+      <h2 id="join-form-title">Join the Chamber</h2>
+      <form method="get" action="thankyou.html">
+        <label>
+          First Name
+          <input type="text" name="fname" required autocomplete="given-name">
+        </label>
 
-      <label>
-        Last Name
-        <input type="text" name="lname" required autocomplete="family-name">
-      </label>
+        <label>
+          Last Name
+          <input type="text" name="lname" required autocomplete="family-name">
+        </label>
 
-      <label>
-        Organizational Title
-        <input
-          type="text"
-          name="orgtitle"
-          autocomplete="organization-title"
-          pattern="[A-Za-z\s\-]{7,}"
-          title="At least 7 characters, letters, spaces, and hyphens only">
-      </label>
+        <label>
+          Organizational Title
+          <input type="text" name="orgtitle" autocomplete="organization-title"
+                 pattern="[A-Za-z\s\-]{7,}"
+                 title="At least 7 characters, letters, spaces, and hyphens only">
+        </label>
 
-      <label>
-        Email Address
-        <input
-          type="email"
-          name="email"
-          required
-          autocomplete="email"
-          placeholder="example@email.com">
-      </label>
+        <label>
+          Email Address
+          <input type="email" name="email" required autocomplete="email" placeholder="example@email.com">
+        </label>
 
-      <label>
-        Mobile Phone
-        <input
-          type="tel"
-          name="phone"
-          required
-          autocomplete="tel">
-      </label>
+        <label>
+          Mobile Phone
+          <input type="tel" name="phone" required autocomplete="tel">
+        </label>
 
-      <label>
-        Business / Organization Name
-        <input
-          type="text"
-          name="business"
-          required
-          autocomplete="organization">
-      </label>
+        <label>
+          Business / Organization Name
+          <input type="text" name="business" required autocomplete="organization">
+        </label>
 
-      <label>
-        Membership Level
-        <select name="membership" required>
-          <option value="">Select a level</option>
-          <option value="np">NP Membership</option>
-          <option value="bronze">Bronze Membership</option>
-          <option value="silver">Silver Membership</option>
-          <option value="gold">Gold Membership</option>
-        </select>
-      </label>
+        <label>
+          Membership Level
+          <select name="membership" required>
+            <option value="">Select a level</option>
+            <option value="np">NP Membership</option>
+            <option value="bronze">Bronze Membership</option>
+            <option value="silver">Silver Membership</option>
+            <option value="gold">Gold Membership</option>
+          </select>
+        </label>
 
-      <label>
-        Business Description
-        <textarea name="description"></textarea>
-      </label>
+        <label>
+          Business Description
+          <textarea name="description"></textarea>
+        </label>
 
-      <!-- Timestamp -->
-      <input type="hidden" name="timestamp" id="timestamp">
+        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="submit" value="Join the Chamber">
+      </form>
+    </section>
 
-      <input type="submit" value="Join the Chamber">
-    </form>
+    <section class="membership-cards" aria-labelledby="membership-levels-title">
+      <h2 id="membership-levels-title">Membership Levels</h2>
 
-    <!-- MEMBERSHIP CARDS -->
-    <section class="membership-cards">
       <div class="card">
         <h3>NP Membership</h3>
         <p>No fee for nonprofit organizations.</p>
@@ -153,7 +136,6 @@
     </section>
   </main>
 
-  <!-- MODALS -->
   <dialog id="np">
     <p>Community events and networking opportunities.</p>
     <button onclick="this.closest('dialog').close()">Close</button>
@@ -174,7 +156,6 @@
     <button onclick="this.closest('dialog').close()">Close</button>
   </dialog>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div>
@@ -199,13 +180,9 @@
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
   <script>
-    // Footer dates
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
-
-    // Form timestamp
     document.getElementById("timestamp").value = new Date().toISOString();
   </script>
 </body>
