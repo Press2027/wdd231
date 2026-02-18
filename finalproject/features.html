@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore key features of the Medical Management POS system including billing, scheduling, and reporting.">
+<meta name="author" content="Preston Machanga">
+<title>Medical Management POS | Features</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/large-styles.css">
+<link rel="icon" href="images/favicon.ico">
+
+<!-- Module script (NO defer) -->
+<script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+<header>
+  <h1>Medical Management POS</h1>
+
+  <!-- Accessible menu button -->
+  <button 
+    id="menu-btn" 
+    aria-label="Open navigation menu" 
+    aria-expanded="false"
+    aria-controls="nav">
+    &#9776;
+  </button>
+
+  <nav id="nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="benefits.html">Benefits</a>
+  </nav>
+</header>
+
+<main>
+  <h2>System Features</h2>
+  <p>Below is a dynamic sample of patient appointments managed by the POS system.</p>
+
+  <section id="data-container" class="cards"></section>
+
+  <!-- Accessible Modal -->
+  <dialog id="modal" aria-labelledby="modal-title">
+    <button id="close-modal" aria-label="Close dialog">Close</button>
+    <div id="modal-content">
+      <h3 id="modal-title">Appointment Details</h3>
+    </div>
+  </dialog>
+
+</main>
+
+<footer>
+  <p>WDD 231 Class Project</p>
+  <p>Preston Machanga</p>
+
+  <a href="attributions.html">Attributions</a>
+  <a href="https://app.screencastify.com/watch/1jakISv3mkPV8GV4h2Bf?checkOrg=b6171fc8-5ac0-4fa4-971d-8dd9bc85033e" 
+     target="_blank" 
+     rel="noopener">
+     Project Demo Video
+  </a>
+
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+<script>
+  document.getElementById("lastModified").textContent = document.lastModified;
+</script>
+
+</body>
+</html>

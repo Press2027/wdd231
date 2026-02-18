@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form Submission</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/large-styles.css">
+</head>
+<body>
+<main>
+<h2>Form Submission Received</h2>
+<p id="output"></p>
+<a href="index.html">Return Home</a>
+</main>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("output").textContent =
+`Thank you ${params.get("name")}! We will contact you at ${params.get("email")}.`;
+</script>
+</body>
+
+<footer>
+    <p>WDD 231 Class Project</p>
+    <p>Preston Machanga</p>
+    <a href="attributions.html">Attributions</a>
+    <a href="https://app.screencastify.com/watch/1jakISv3mkPV8GV4h2Bf?checkOrg=b6171fc8-5ac0-4fa4-971d-8dd9bc85033e" target="_blank">Project Demo Video</a>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    // Footer: show last modified date
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
+
+
+
+</html>

@@ -1,0 +1,297 @@
+/* =======================
+   Base Styles (Mobile First)
+======================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ffb74d;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+/* =======================
+   Header & Navigation
+======================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a4d8c;
+  color: white;
+  padding: 1rem;
+}
+
+#menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#menu-btn:hover {
+  transform: scale(1.2);
+}
+
+nav {
+  display: none;
+}
+
+nav.open {
+  display: block;
+  margin-top: 1rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* =======================
+   Hero Section
+======================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.hero img:hover {
+  transform: scale(1.02);
+}
+
+/* =======================
+   Cards Section
+======================= */
+.cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  background: #e3f2fd;
+}
+
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #0a4d8c;
+  color: white;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.card button:hover {
+  background: #07416a;
+  transform: scale(1.05);
+}
+
+/* =======================
+   Modal Dialog
+======================= */
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.6);
+}
+
+#close-modal {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #0a4d8c;
+  color: white;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#close-modal:hover {
+  background: #07416a;
+  transform: scale(1.05);
+}
+
+/* =======================
+   Form Styles
+======================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+input, textarea, button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0a4d8c;
+  box-shadow: 0 0 5px rgba(10,77,140,0.5);
+}
+
+button {
+  background: #0a4d8c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #07416a;
+  transform: scale(1.05);
+}
+
+/* =======================
+   Footer
+======================= */
+footer {
+  background: #0a4d8c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* =======================
+   Attributions Page
+======================= */
+.attributions main {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin: 2rem auto;
+}
+
+.attributions h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.attributions ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.attributions ul li {
+  margin-bottom: 0.75rem;
+}
+
+.attributions a {
+  color: #0a4d8c;
+  text-decoration: underline;
+}
+
+.attributions a:hover {
+  text-decoration: none;
+}
+
+/* =======================
+   Dark Mode
+======================= */
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark header,
+body.dark footer {
+  background-color: #1e1e1e;
+}
+
+body.dark .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+/* =======================
+   Responsive Media Queries
+======================= */
+@media (max-width: 767px) {
+  main {
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  header nav a {
+    display: block;
+    margin: 0.25rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex !important;
+  }
+
+  nav a {
+    margin: 0 1rem;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+}

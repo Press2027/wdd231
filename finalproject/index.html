@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Medical Management POS system for clinics, hospitals, and private practices. Improve workflow, billing, and patient management.">
+  <meta name="author" content="Preston Machanga">
+  <meta property="og:title" content="Medical Management POS | Home">
+  <meta property="og:description" content="Efficient healthcare operations with integrated POS solutions.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:type" content="website">
+  <title>Medical Management POS | Home</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/large-styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <!-- Preload Hero Image (Performance Boost) -->
+  <link rel="preload" as="image" href="images/hero.jpg">
+
+  <!-- JavaScript Module (No defer needed) -->
+  <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Medical Management POS</h1>
+
+    <!-- Accessible Menu Button -->
+    <button 
+      id="menu-btn" 
+      aria-label="Open navigation menu" 
+      aria-expanded="false" 
+      aria-controls="nav">
+      &#9776;
+    </button>
+
+    <!-- Navigation -->
+    <nav id="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="benefits.html">Benefits</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <img 
+        src="images/hero.jpg" 
+        alt="Medical clinic POS system interface" 
+        loading="lazy">
+      <div>
+        <h2 id="hero-heading">Smart Healthcare Operations</h2>
+        <p>
+          A complete medical management and point-of-sale system designed 
+          to streamline patient care and administrative efficiency.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section>
+      <h2>What is a Medical POS System?</h2>
+      <p>
+        A Medical Management POS system integrates patient registration, 
+        scheduling, billing, insurance processing, and inventory tracking 
+        into a unified platform. It supports clinics, hospitals, and private 
+        practices by reducing administrative errors and improving workflow efficiency.
+      </p>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>Patient Registration</h3>
+        <p>Quick digital patient intake and record management.</p>
+      </div>
+
+      <div class="card">
+        <h3>Billing & Insurance</h3>
+        <p>Automated invoicing and claims processing.</p>
+      </div>
+
+      <div class="card">
+        <h3>Inventory Tracking</h3>
+        <p>Real-time tracking of medications and supplies.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>WDD 231 Class Project</p>
+    <p>Preston Machanga</p>
+
+    <a href="attributions.html">Attributions</a>
+    <a href="https://app.screencastify.com/watch/1jakISv3mkPV8GV4h2Bf?checkOrg=b6171fc8-5ac0-4fa4-971d-8dd9bc85033e" 
+       target="_blank" 
+       rel="noopener">
+       Project Demo Video
+    </a>
+
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- Last Modified Script -->
+  <script>
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+
+</body>
+</html>
