@@ -4,18 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Attributions for images, icons, and other resources used in the Medical Management POS project.">
-<meta name="author" content="Preston Machnga">
+<meta name="author" content="Preston Machanga">
+
 <title>Medical Management POS | Attributions</title>
 
+<!-- Open Graph -->
+<meta property="og:title" content="Medical Management POS Attributions">
+<meta property="og:description" content="Resources used in developing the Medical Management POS website.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://press2027.github.io/wdd231/images/hero.jpg">
+<meta property="og:url" content="https://press2027.github.io/wdd231/attributions.html">
 
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/large-styles.css">
 <link rel="icon" href="images/favicon.ico">
+
+<link rel="stylesheet" href="styles/styles.css">
+<link rel="stylesheet" href="styles/large-styles.css">
 </head>
+
 <body>
 <header>
   <h1>Medical Management POS</h1>
-  <button id="menu-btn">&#9776;</button>
+  <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
   <nav id="nav">
     <a href="index.html">Home</a>
     <a href="features.html">Features</a>
@@ -30,7 +39,8 @@
   <ul>
     <li>
       <strong>Hero Image:</strong> 
-      <a href="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1153&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" target="_blank" rel="noopener noreferrer">
+      <a href="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1153&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+         target="_blank" rel="noopener noreferrer">
         Clinic interface image
       </a> by Unsplash
     </li>
@@ -45,7 +55,7 @@
       <strong>Fonts:</strong> Arial, system font stack
     </li>
     <li>
-      <strong>Video Demo:</strong> Self-recorded demonstration using youtube
+      <strong>Video Demo:</strong> Self-recorded demonstration
     </li>
   </ul>
 
@@ -53,25 +63,13 @@
 </main>
 
 <footer>
-    <p>WDD 231 Class Project</p>
-    <p>Preston Machanga</p>
-    <a href="attributions.html">Attributions</a>
-    <a href="https://app.screencastify.com/watch/1jakISv3mkPV8GV4h2Bf?checkOrg=b6171fc8-5ac0-4fa4-971d-8dd9bc85033e" target="_blank">Project Demo Video</a>
-    <p>Last Modified: <span id="lastModified"></span></p>
-  </footer>
+  <p>WDD 231 Class Project</p>
+  <p>Preston Machanga</p>
+  <a href="attributions.html">Attributions</a>
+  <a href="https://app.screencastify.com/watch/1jakISv3mkPV8GV4h2Bf?checkOrg=b6171fc8-5ac0-4fa4-971d-8dd9bc85033e" target="_blank" rel="noopener">Project Demo Video</a>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
 
-  <script>
-    // Footer: show last modified date
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
-
-<script type="module" src="scripts/main.js" defer></script>
+<script type="module" src="scripts/main.js"></script>
 </body>
-
-
-
-
-</body>
-</html>
-
 </html>
